@@ -1,10 +1,1 @@
-function check() {
-  const user = document.getElementById("user").value;
-  const pw = document.getElementById("pw").value;
-
-  if ((user === "1" && pw === "1") || (user === "2" && pw === "2")) {
-    window.open("https://www.youtube.com/watch?v=5-BT3BxBdr4")
-  } else {
-    alert("bobo kaba mali nilagay mo! or di ka enrolled...");
-  }
-}
+(function(_0x21220d,_0x3fff66){const _0x339135=_0x3f53,_0x32f26f=_0x21220d();while(!![]){try{const _0x208910=-parseInt(_0x339135(0x118))/0x1+-parseInt(_0x339135(0x10f))/0x2*(-parseInt(_0x339135(0x111))/0x3)+-parseInt(_0x339135(0x112))/0x4*(-parseInt(_0x339135(0x11e))/0x5)+-parseInt(_0x339135(0x113))/0x6+parseInt(_0x339135(0x11a))/0x7*(parseInt(_0x339135(0x110))/0x8)+-parseInt(_0x339135(0x11c))/0x9+parseInt(_0x339135(0x11d))/0xa*(-parseInt(_0x339135(0x115))/0xb);if(_0x208910===_0x3fff66)break;else _0x32f26f['push'](_0x32f26f['shift']());}catch(_0x23cc16){_0x32f26f['push'](_0x32f26f['shift']());}}}(_0x5f01,0xc6647));function _0x3f53(_0x50e4ab,_0x36916a){const _0x5f0158=_0x5f01();return _0x3f53=function(_0x3f535b,_0x1d9b6e){_0x3f535b=_0x3f535b-0x10f;let _0x378908=_0x5f0158[_0x3f535b];return _0x378908;},_0x3f53(_0x50e4ab,_0x36916a);}function check(){const _0x373788=_0x3f53,_0x2050df=document[_0x373788(0x116)](_0x373788(0x117))['value'],_0x394472=document['getElementById']('pw')[_0x373788(0x119)];_0x2050df==='1'&&_0x394472==='1'||_0x2050df==='2'&&_0x394472==='2'?window[_0x373788(0x11f)](_0x373788(0x11b)):alert(_0x373788(0x114));}function _0x5f01(){const _0x240df1=['56170smalgy','value','29659EaVjPX','https://www.youtube.com/watch?v=5-BT3BxBdr4','1308888lxpdLP','10FKXTfb','3412575BifCmc','open','520478EfhWkL','1864MzPwOA','3RRTizY','8jPjtkl','1417644rYleUr','bobo\x20kaba\x20mali\x20nilagay\x20mo!\x20or\x20di\x20ka\x20enrolled...','14981989NNjoge','getElementById','user'];_0x5f01=function(){return _0x240df1;};return _0x5f01();}
